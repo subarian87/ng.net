@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.dll
+SinglePageApp/SinglePageApp/Content/angular2-quickstart/node_modules/*
+SinglePageApp/SinglePageApp/bin/*
+SinglePageApp/SinglePageApp/obj/*
+SinglePageApp/DataAccessLayer/bin/*
+SinglePageApp/DataAccessLayer/obj/*
+*.pdb

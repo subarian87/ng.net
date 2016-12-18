@@ -22,9 +22,20 @@ namespace SinglePageApp
             // - Enable Default routes at /api.
             httpConfiguration.MapHttpAttributeRoutes();
             httpConfiguration.Routes.MapHttpRoute(
-                name: "DefaultApi",
+                name: "DefaultRoute",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
+            );
+
+            httpConfiguration.Routes.MapHttpRoute(
+                name: "RouteWithAction",
+                routeTemplate: "api/{controller}/{action}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+
+            httpConfiguration.Routes.MapHttpRoute(
+                name: "RouteFuflo",
+                routeTemplate: "api/{controller}/{action}/{id}/{name}/{content}"
             );
 
             app.UseWebApi(httpConfiguration);
